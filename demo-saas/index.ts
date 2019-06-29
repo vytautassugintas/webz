@@ -19,7 +19,7 @@ let clickCount: number = 0;
 
 const onClickListener = container.addEventListener("click", () => {
   clickCount = clickCount + 1;
-  container.innerHTML = `${clickCount}`;
+  container.textContent = `${clickCount}`;
 });
 
 observer.observe(container, onbserverConfig);

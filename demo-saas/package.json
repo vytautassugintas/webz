@@ -15,7 +15,7 @@
     "typescript": "^3.5.2"
   },
   "scripts": {
-    "live-server": "live-server --watch=dist --port=1337",
+    "live-server": "live-server --watch=dist,index.html --port=1337",
     "build-task:scss-compile": "node-sass *.scss -o dist",
     "build-task:autoprefixer": "postcss dist/*.css --use autoprefixer -d dist",
     "ts:build": "tsc",
