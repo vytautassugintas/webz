@@ -19,6 +19,12 @@ a {
   color: $primary-color;
 }
 
+.text {
+  &--center {
+    text-align: center;
+  }
+}
+
 .alt-text {
   color: #777;
   font-size: 14px;
@@ -60,6 +66,7 @@ a {
 .hero {
   padding: 56px 0;
   display: flex;
+  align-items: center;
 
   &__header {
     letter-spacing: 2px;
@@ -67,10 +74,6 @@ a {
 
   &__subtitle {
     margin-bottom: 56px;
-  }
-
-  &__img-wrapper {
-    align-self: center;
   }
 
   &__img {

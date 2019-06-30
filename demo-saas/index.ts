@@ -1,25 +1,16 @@
-const onbserverConfig: MutationObserverInit = {
-  attributes: true,
-  childList: true,
-  subtree: true
-};
+const UNIT = "px";
+const AUTO = "auto";
+const MOBILE_HEIGHT = 812;
 
-const mutationCallback: MutationCallback = function(
-  mutationsList: MutationRecord[]
-): void {
-  for (const mutation of mutationsList) {
-    console.log(mutation.target.textContent);
-  }
-};
+const HERO_PADDING = 56;
+const NAV_HEIGHT = 72;
 
-const observer = new MutationObserver(mutationCallback);
-const container: HTMLElement = document.getElementById("container");
+const windowHeight = window.innerHeight;
+const screenHeight = screen.height;
 
-let clickCount: number = 0;
+const landingContainer: HTMLElement = document.getElementById("landing");
+const landingContainerHeight = windowHeight - HERO_PADDING * 2 - NAV_HEIGHT;
 
-const onClickListener = container.addEventListener("click", () => {
-  clickCount = clickCount + 1;
-  container.textContent = `${clickCount}`;
-});
-
-observer.observe(container, onbserverConfig);
+if (screenHeight >= MOBILE_HEIGHT) {
+  landingContainer.style.height = `${landingContainerHeight}${UNIT}`;
+}
