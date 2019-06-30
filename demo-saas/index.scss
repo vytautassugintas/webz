@@ -64,7 +64,8 @@ a {
 }
 
 .hero {
-  padding: 56px 0;
+  padding-top: 14px;
+  padding-bottom: 94px;
   display: flex;
   align-items: center;
 
@@ -85,6 +86,17 @@ a {
   }
 }
 
+.scroll-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 64px;
+
+  animation: mover 1s infinite alternate;
+}
+
 .btn {
   font-size: 16px;
   color: $primary-color;
@@ -97,5 +109,14 @@ a {
   &:hover {
     color: #fff;
     background: $primary-color;
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
   }
 }

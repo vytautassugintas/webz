@@ -2,15 +2,23 @@ const UNIT = "px";
 const AUTO = "auto";
 const MOBILE_HEIGHT = 812;
 
-const HERO_PADDING = 56;
+const HERO_PADDING = 112;
 const NAV_HEIGHT = 72;
 
 const windowHeight = window.innerHeight;
 const screenHeight = screen.height;
 
-const landingContainer: HTMLElement = document.getElementById("landing");
-const landingContainerHeight = windowHeight - HERO_PADDING * 2 - NAV_HEIGHT;
+const heroContainer: HTMLElement = document.getElementById("hero");
+
+const landingContainerHeight = windowHeight - HERO_PADDING - NAV_HEIGHT;
+
+function removeScrollIcon() {
+  const scrollIcon = document.getElementById("scroll-icon");
+  scrollIcon && scrollIcon.parentNode.removeChild(scrollIcon);
+}
 
 if (screenHeight >= MOBILE_HEIGHT) {
-  landingContainer.style.height = `${landingContainerHeight}${UNIT}`;
+  heroContainer.style.height = `${landingContainerHeight}${UNIT}`;
+} else {
+  removeScrollIcon();
 }
