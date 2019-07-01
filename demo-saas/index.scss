@@ -147,6 +147,26 @@ a {
   }
 }
 
+.features {
+  padding-top: 56px;
+
+  &__container {
+    padding-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &__item {
+    max-width: 200px;
+    margin-right: 48px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 @keyframes mover {
   0% {
     transform: translateY(0);
