@@ -9,9 +9,6 @@ const windowHeight = window.innerHeight;
 const screenHeight = screen.height;
 
 const heroContainer: HTMLElement = document.getElementById("hero");
-const featuresSectionContainer: HTMLElement = document.getElementById(
-  "features-section"
-);
 
 const landingContainerHeight = windowHeight - HERO_PADDING - NAV_HEIGHT;
 
@@ -22,7 +19,6 @@ function removeScrollIcon() {
 
 if (screenHeight >= MOBILE_HEIGHT) {
   heroContainer.style.height = `${landingContainerHeight}${UNIT}`;
-  featuresSectionContainer.style.height = `${windowHeight}${UNIT}`;
 } else {
   removeScrollIcon();
 }
